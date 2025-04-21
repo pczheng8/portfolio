@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Zheng | Quantitative Trader</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         :root {
             --primary: #0a192f;
@@ -559,7 +560,7 @@
 
             <div class="chart-container">
                 <h3 style="margin-bottom: 15px; color: var(--secondary);">Crypto Trading Strategy Performance</h3>
-                <div id="performance-chart" style="height: 250px; background-color: #1a3156;"></div>
+                <canvas id="performance-chart" style="height: 250px;"></canvas>
             </div>
             
             <div class="metrics">
@@ -665,5 +666,90 @@
             <p>Designed & Built by Peter Zheng © 2025</p>
         </footer>
     </div>
+
+    <script>
+        // Performance chart data
+        const performanceData = {
+            labels: ['Jan 2023', 'Feb 2023', 'Mar 2023', 'Apr 2023', 'May 2023', 'Jun 2023', 
+                    'Jul 2023', 'Aug 2023', 'Sep 2023', 'Oct 2023', 'Nov 2023', 'Dec 2023',
+                    'Jan 2024', 'Feb 2024', 'Mar 2024', 'Apr 2024', 'May 2024', 'Jun 2024',
+                    'Jul 2024', 'Aug 2024', 'Sep 2024', 'Oct 2024', 'Nov 2024', 'Dec 2024'],
+            datasets: [{
+                label: 'Portfolio Returns (%)',
+                data: [0, 8, 15, 22, 28, 35, 42, 55, 68, 85, 98, 110, 
+                       118, 125, 130, 135, 140, 145, 150, 155, 160, 165, 168, 170],
+                borderColor: '#64ffda',
+                backgroundColor: 'rgba(100, 255, 218, 0.1)',
+                pointBackgroundColor: '#64ffda',
+                pointBorderColor: '#0a192f',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: '#64ffda',
+                fill: true,
+                tension: 0.4
+            }]
+        };
+
+        // Chart configuration
+        const chartConfig = {
+            type: 'line',
+            data: performanceData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: '#112240',
+                        titleColor: '#64ffda',
+                        bodyColor: '#ccd6f6',
+                        borderColor: '#64ffda',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return `Return: ${context.parsed.y}%`;
+                            }
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#8892b0',
+                            maxRotation: 45,
+                            minRotation: 45
+                        },
+                        grid: {
+                            color: 'rgba(136, 146, 176, 0.1)'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#8892b0',
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(136, 146, 176, 0.1)'
+                        }
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'nearest'
+                }
+            }
+        };
+
+        // Initialize chart when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('performance-chart').getContext('2d');
+            new Chart(ctx, chartConfig);
+        });
+    </script>
 </body>
 </html>
