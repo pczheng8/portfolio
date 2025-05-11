@@ -499,48 +499,126 @@
         <section id="experience">
             <h2 class="section-title">Experience</h2>
             
-            <div class="experience-card">
-                <h3>Software Engineer Intern</h3>
-                <div class="company">HP</div>
-                <div class="duration">May 2024 - August 2024 | Vancouver, WA</div>
-                <ul>
-                    <li>Built a retrieval-augmented generation (RAG) website using Python and Flask, including over 1 million internal documents</li>
-                    <li>Containerized application with Docker for streamlined deployment</li>
-                    <li>Developed an Azure OpenAI wrapper and pipelined unstructured document vector data using PostgreSQL and pgvector</li>
-                </ul>
-            </div>
-            
-            <div class="experience-card">
-                <h3>Software Engineer Intern</h3>
-                <div class="company">GradeWiz (YC startup)</div>
-                <div class="duration">December 2023 - January 2024 | Ithaca, NY</div>
-                <ul>
-                    <li>Streamlined deep learning image segmentation using YOLOv5 and PyTorch, enhancing the grading process by identifying individual questions on students' exams. Improved mean average precision (mAP) by 35%</li>
-                    <li>Leveraged Mathpix API to convert image segments into LaTeX using optical character recognition (OCR)</li>
-                </ul>
-            </div>
-            
-            <div class="experience-card">
-                <h3>Computer Vision Research Intern</h3>
-                <div class="company">UC Davis</div>
-                <div class="duration">June 2022 - July 2022 | Davis, CA</div>
-                <ul>
-                    <li>Developed object detection models to forecast agricultural yield using YOLOv5 and PyTorch; improved mAP by 31%</li>
-                    <li>Built and trained MobileNetV3 model for image classification; achieved an accuracy of 94%</li>
-                    <li>Authored a research paper and presented findings at a campus-wide symposium. Program had an 8% acceptance rate</li>
-                </ul>
-            </div>
-            
-            <div class="experience-card">
-                <h3>Data Mining Research Intern</h3>
-                <div class="company">Texas State University</div>
-                <div class="duration">October 2021 - February 2022 | San Marcos, TX</div>
-                <ul>
-                    <li>Built machine learning pipeline to analyze big data (3 billion entries) from Microsoft Azure virtual machines</li>
-                    <li>Preprocessed and visualized the Microsoft cloud computing data in Orange and used machine learning algorithms such as k-means clustering to draw insights into companies' cloud waste</li>
-                    <li>Pioneered innovative recommendation algorithm based on rightsizing; achieved 49% in cost savings</li>
-                    <li>Authored a research paper and presented findings at a campus-wide symposium. 20% of interviewees accepted</li>
-                </ul>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <img src="/api/placeholder/600/400" alt="HP Internship" class="experience-image">
+                    <div class="experience-content">
+                        <h3>Software Engineer Intern</h3>
+                        <div class="company">HP</div>
+                        <div class="duration">May 2024 - August 2024 | Vancouver, WA</div>
+                        <p class="description">
+                            Engineered a comprehensive <span class="highlight">retrieval-augmented generation (RAG)</span> website using Python and Flask, seamlessly integrating over 1 million internal documents. The system was containerized with Docker for smooth deployment across environments and featured a custom Azure OpenAI wrapper with PostgreSQL and pgvector for efficient document retrieval.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Azure OpenAI</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <img src="images/gradewiz.webp" alt="GradeWiz Internship" class="experience-image">
+                    <div class="experience-content">
+                        <h3>Software Engineer Intern</h3>
+                        <div class="company">GradeWiz (YC startup)</div>
+                        <div class="duration">December 2023 - January 2024 | Ithaca, NY</div>
+                        <p class="description">
+                            Streamlined deep learning image segmentation using YOLOv5 and PyTorch, enhancing the grading process by identifying individual questions on students' exams. This innovative approach improved mean average precision (mAP) by <span class="highlight">35%</span> and leveraged Mathpix API for accurate LaTeX conversion of mathematical content through optical character recognition.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">YOLOv5</span>
+                            <span class="tag">OCR</span>
+                            <span class="tag">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <img src="images/ucdavis.webp" alt="UC Davis Research" class="experience-image">
+                    <div class="experience-content">
+                        <h3>Computer Vision Research Intern</h3>
+                        <div class="company">UC Davis</div>
+                        <div class="duration">June 2022 - July 2022 | Davis, CA</div>
+                        <p class="description">
+                            Developed advanced object detection models using YOLOv5 and PyTorch to forecast agricultural yield with improved precision. The project also involved building and training a MobileNetV3 model for image classification that achieved an impressive <span class="highlight">94% accuracy</span>.
+                        </p>
+                        
+                        <div class="detection-demo">
+                            <img src="/api/placeholder/600/400" alt="Fruit Detection">
+                            <div class="detection-box animate-detection" style="top: 50px; left: 100px; width: 100px; height: 80px;">
+                                <div class="detection-label">Strawberry: 98%</div>
+                            </div>
+                            <div class="detection-box animate-detection" style="top: 150px; left: 250px; width: 120px; height: 90px;">
+                                <div class="detection-label">Strawberry: 97%</div>
+                            </div>
+                            <div class="detection-box animate-detection" style="top: 200px; left: 400px; width: 110px; height: 85px;">
+                                <div class="detection-label">Strawberry: 95%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">YOLOv5</span>
+                            <span class="tag">MobileNetV3</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="experience-content">
+                        <h3>Data Mining Research Intern</h3>
+                        <div class="company">Texas State University</div>
+                        <div class="duration">October 2021 - February 2022 | San Marcos, TX</div>
+                        <p class="description">
+                            Built a sophisticated machine learning pipeline to analyze big data (3 billion entries) from Microsoft Azure virtual machines. This project involved extensive data preprocessing and visualization, leading to the development of an innovative recommendation algorithm that achieved <span class="highlight">49% cost savings</span> through intelligent rightsizing.
+                        </p>
+                        
+                        <div class="cloud-viz">
+                            <div class="server" style="left: 10%; height: 40px;">
+                                <div class="utilization" style="height: 15px;"></div>
+                            </div>
+                            <div class="server" style="left: 20%; height: 60px;">
+                                <div class="utilization" style="height: 15px;"></div>
+                            </div>
+                            <div class="server" style="left: 30%; height: 70px;">
+                                <div class="utilization" style="height: 20px;"></div>
+                            </div>
+                            <div class="server" style="left: 40%; height: 50px;">
+                                <div class="utilization" style="height: 10px;"></div>
+                            </div>
+                            <div class="server" style="left: 50%; height: 80px;">
+                                <div class="utilization" style="height: 25px;"></div>
+                            </div>
+                            <div class="server" style="left: 60%; height: 65px;">
+                                <div class="utilization" style="height: 15px;"></div>
+                            </div>
+                            <div class="server" style="left: 70%; height: 55px;">
+                                <div class="utilization" style="height: 20px;"></div>
+                            </div>
+                            <div class="server" style="left: 80%; height: 75px;">
+                                <div class="utilization" style="height: 30px;"></div>
+                            </div>
+                            <div class="server" style="left: 90%; height: 45px;">
+                                <div class="utilization" style="height: 10px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tags">
+                            <span class="tag">Big Data</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">K-means Clustering</span>
+                            <span class="tag">Cloud Computing</span>
+                            <span class="tag">Azure</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
