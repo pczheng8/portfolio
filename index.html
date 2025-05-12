@@ -199,16 +199,17 @@
             box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
         }
         
-/*         .experience-image {
+        .experience-image {
+            display: block;
             width: 100%;
             height: 200px;
             object-fit: contain;
             background-color: #112240;
-            padding: 20px;
+/*             padding: 20px; */
             border-bottom: 1px solid rgba(100, 255, 218, 0.2);
-        } */
+        }
 
-        .experience-image-container {
+/*         .experience-image-container {
           width: 100%;
           height: 200px;
           padding: 20px;
@@ -225,7 +226,7 @@
           max-height: 100%;
           object-fit: contain;
           display: block;
-        }
+        } */
         
         .experience-content {
             padding: 25px;
@@ -575,12 +576,10 @@
 
         <section id="experience">
             <h2 class="section-title">Experience</h2>
-            
+
             <div class="experience-grid">
                 <div class="experience-card">
-                    <div class="experience-image-container">
-                      <img src="images/hp.png" alt="HP Internship" class="experience-image">
-                    </div>
+                    <img src="images/hp.png" alt="HP Internship" class="experience-image">
                     <div class="experience-content">
                         <h3>Software Engineer Intern</h3>
                         <div class="company">HP</div>
@@ -597,11 +596,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="experience-card">
-                    <div class="experience-image-container">
-                      <img src="images/gradewiz.webp" alt="GradeWiz Internship" class="experience-image">
-                    </div>
+                    <img src="images/gradewiz.webp" alt="GradeWiz Internship" class="experience-image">
                     <div class="experience-content">
                         <h3>Software Engineer Intern</h3>
                         <div class="company">GradeWiz (YC startup)</div>
@@ -618,11 +615,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="experience-card">
-                    <div class="experience-image-container">
-                      <img src="images/ucdavis.webp" alt="UC Davis Research" class="experience-image">
-                    </div>
+                    <img src="images/ucdavis.webp" alt="UC Davis Research" class="experience-image">
                     <div class="experience-content">
                         <h3>Computer Vision Research Intern</h3>
                         <div class="company">UC Davis</div>
@@ -630,7 +625,7 @@
                         <p class="description">
                             Developed advanced object detection models using YOLOv5 and PyTorch to forecast agricultural yield with improved precision. The project also involved building and training a MobileNetV3 model for image classification that achieved an impressive <span class="highlight">94% accuracy</span>.
                         </p>
-                        
+
                         <div class="tags">
                             <span class="tag">Computer Vision</span>
                             <span class="tag">PyTorch</span>
@@ -640,11 +635,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="experience-card">
-                    <div class="experience-image-container">
-                      <img src="images/txst.webp" alt="TXST Research" class="experience-image">
-                    </div>
+                    <img src="images/txst.webp" alt="UC Davis Research" class="experience-image">
                     <div class="experience-content">
                         <h3>Data Mining Research Intern</h3>
                         <div class="company">Texas State University</div>
@@ -652,7 +645,7 @@
                         <p class="description">
                             Built a sophisticated machine learning pipeline to analyze big data (3 billion entries) from Microsoft Azure virtual machines. This project involved extensive data preprocessing and visualization, leading to the development of an innovative recommendation algorithm that achieved <span class="highlight">49% cost savings</span> through intelligent rightsizing.
                         </p>
-                        
+
                         <div class="tags">
                             <span class="tag">Big Data</span>
                             <span class="tag">Machine Learning</span>
